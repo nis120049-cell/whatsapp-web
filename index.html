@@ -2,17 +2,132 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" 
-    content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
+
     <title>WhatsApp Web</title>
 </head>
 
 <body>
 
-    <h1>WhatsApp Web</h1>
+<div class="app">
 
-    <p>Website chat saya berhasil dibuat! 🎉</p>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <div class="sidebar-header">
+            <div class="profile">👤</div>
+        </div>
+
+        <div class="search">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Cari atau mulai chat"
+            >
+        </div>
+
+        <div class="chat-list">
+
+            <div class="chat" onclick="openChat('Raka')">
+                <div class="chat-avatar">👦</div>
+
+                <div class="chat-info">
+                    <div class="chat-name">Raka</div>
+                    <div class="last-message">
+                        Halo 👋
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat" onclick="openChat('Alya')">
+                <div class="chat-avatar">👩</div>
+
+                <div class="chat-info">
+                    <div class="chat-name">Alya</div>
+                    <div class="last-message">
+                        Apa kabar?
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat" onclick="openChat('Dimas')">
+                <div class="chat-avatar">👨</div>
+
+                <div class="chat-info">
+                    <div class="chat-name">Dimas</div>
+                    <div class="last-message">
+                        Sampai nanti
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CHAT AREA -->
+    <div class="chat-area" id="chatArea">
+
+        <div class="chat-header">
+
+            <div class="chat-avatar">
+                👦
+            </div>
+
+            <div>
+                <div class="contact-name" id="contactName">
+                    Raka
+                </div>
+
+                <div class="status">
+                    online
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- PESAN -->
+        <div class="messages" id="messages">
+
+            <div class="message received">
+                Halo 👋
+            </div>
+
+            <div class="message sent">
+                Halo juga!
+            </div>
+
+        </div>
+
+
+        <!-- INPUT -->
+        <div class="message-input">
+
+            <input
+                type="text"
+                id="messageInput"
+                placeholder="Ketik pesan"
+            >
+
+            <button
+                class="send-btn"
+                onclick="sendMessage()"
+            >
+                ➤
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
